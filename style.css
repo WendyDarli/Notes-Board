@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Gaegu&family=M+PLUS+Rounded+1c&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gaegu&display=swap');
+
+
+body{
+    background-color: #D7D7D7;
+}
+
+#title-container{
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+
+
+
+h1 {
+    margin: 0;
+    padding:  0px 50px;
+}
+#messg-p{
+    margin: 0;
+    padding:  0px 150px;
+}
+
+#add-note-btn{
+    font-size: 25px;
+    
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+    border: 2px solid black;
+    background-color: #D7D7D7;
+}
+#add-note-btn:hover{
+    background-color: #bdbdbd;
+}
+
+#messages-container{
+    padding: 20px 30px;
+}
+
+#generate-random-noteid{
+    background-color: pink;
+    font-family: "Gaegu", sans-serif;
+    font-size: 20px;
+
+    padding: 32px 13px 13px 13px;
+    width: 194px;
+    height: 199px;
+    box-shadow: 10px 10px 10.3px -1px rgba(0,0,0,0.25);
+}
+
+.note{
+    border: none;
+    background-color: pink;
+    font-family: "Gaegu", sans-serif;
+    font-size: 15px;
+    outline: none;
+}
+
+#message{  
+    resize: none;
+ 
+}
+
+
+#messageAuthor{
+    text-align: end;
+    width: 188px;
+}
