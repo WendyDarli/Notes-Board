@@ -13,6 +13,7 @@ body{
     align-items: center;
     justify-content: center;
     margin: 40px 0;
+    
 }
 
 
@@ -44,18 +45,33 @@ h1 {
     padding: 20px 30px;
 }
 
-#generate-random-noteid{
+
+
+#mynote{
+    position: absolute;
+
     background-color: pink;
     font-family: "Gaegu", sans-serif;
     font-size: 20px;
-
-    padding: 32px 13px 13px 13px;
+    padding: 0px 13px 13px 13px;
+   
     width: 194px;
-    height: 199px;
+    height: 221px;
     box-shadow: 10px 10px 10.3px -1px rgba(0,0,0,0.25);
 }
+#mynoteheader{
+    background-image: linear-gradient(rgb(251, 165, 180), pink);
+    width: 220px;
+    height: 32px;
+    margin-left: -13px;
+    margin-right: -13px;
+    cursor: move;
+    
+}
+
 
 .note{
+    
     border: none;
     background-color: pink;
     font-family: "Gaegu", sans-serif;
@@ -65,7 +81,7 @@ h1 {
 
 #message{  
     resize: none;
- 
+    
 }
 
 
