@@ -1,32 +1,17 @@
-//TO FIX movimento se torna lento ao mover a nota, arrumar lógica ()
-//anexar a rotação à uma nota especifica, caso o usuário tenha mais de uma nota, não irá girar todas juntas
-
-let isRotating = false;
-
-function getCenter(element) {
-    const { left, top, width, height } = element.getBoundingClientRect();
-    return { x: left + width / 2, y: top + height / 2 };
-}
-
-const mynote = document.getElementById("mynote");
-const mynoteCenter = getCenter(mynote);
-
-document.addEventListener("mousedown", (event) => {
-    if (event.button === 2) {
-        isRotating = true;
+  const mynote = document.getElementById("mynote");
+  let rotation = 0;
+  
+  mynote.addEventListener("mousedown", (event) => {
+    if (event.button === 2) { // Verifica se o botão direito do mouse foi clicado
+        rotation += 0.2;
+        mynote.style.boxShadow = "10px 10px 10.3px -1px rgba(0, 0, 0, 0.25)";
+        if (rotation > 0.2) {
+            rotation = -0.2; 
+            mynote.style.boxShadow = "-10px 10px 10.3px -1px rgba(0, 0, 0, 0.25)";
+        }
+        mynote.style.transform = `rotate(${rotation}rad)`;
     }
 });
 
-document.addEventListener("mouseup", (event) => {
-    if (event.button === 2) {
-        isRotating = false;
-    }
-});
-
-addEventListener("mousemove", ({ clientX, clientY }) => {
-    if (isRotating) {
-        const angle = Math.atan2(clientY - mynoteCenter.y, clientX - mynoteCenter.x);
-        mynote.style.transform = `rotate(${angle}rad)`;
-    }
-});
-
+//prevent context menu from appearing
+window.addEventListener(`contextmenu`, (e) => e.preventDefault());
