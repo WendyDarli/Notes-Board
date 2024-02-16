@@ -17,34 +17,35 @@ body{
 }
 
 
-
-
 h1 {
     margin: 0;
     padding:  0px 50px;
+    color: #BABABA;
+    font-size: 35px;
 }
 #messg-p{
     margin: 0;
     padding:  0px 150px;
+    color: #BABABA;
+    font-size: 20px;
 }
 
 #add-note-btn{
     font-size: 25px;
-    
+    color: #BABABA;
     padding: 5px;
     width: 40px;
     height: 40px;
-    border: 2px solid black;
+    border: 2px solid #BABABA;
     background-color: #D7D7D7;
 }
 #add-note-btn:hover{
-    background-color: #bdbdbd;
+    background-color: #d2d2d2;
 }
 
 #messages-container{
     padding: 20px 30px;
 }
-
 
 
 #mynote{

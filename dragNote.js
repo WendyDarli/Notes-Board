@@ -32,8 +32,8 @@ function dragElement(elmnt) {
     pos4 = e.clientY;
     //prevent movement top
     let newTop = elmnt.offsetTop - pos2;
-    if (newTop < 172) {
-        newTop = 175;
+    if (newTop < 142) {
+        newTop = 145;
     }
     elmnt.style.top = newTop + "px";
     elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
