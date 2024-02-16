@@ -61,7 +61,7 @@ h1 {
    
 }
 #mynoteheader{
-    background-image: linear-gradient(rgb(251, 165, 180), pink);
+    background-image: linear-gradient(#fba5b4, pink);
     width: 220px;
     height: 32px;
     margin-left: -13px;
