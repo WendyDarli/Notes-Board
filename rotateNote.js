@@ -1,5 +1,5 @@
-  const mynote = document.getElementById("mynote");
-  let rotation = 0;
+const mynote = document.getElementById("mynote");
+let rotation = 0;
   
   mynote.addEventListener("mousedown", (event) => {
     if (event.button === 2) {
