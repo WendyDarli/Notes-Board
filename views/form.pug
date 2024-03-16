@@ -1,0 +1,11 @@
+html 
+    head 
+        title New Message 
+    body 
+        h1 Send Your Message! 
+
+        form(method="POST" action="/new")
+            textarea(name="messageText", cols="25", rows="8" type="text" placeholder="Your message here." maxlength="184" spellcheck="false")
+            input(name="messageUser" placeholder="- Your name here." maxlength="27" type="text" spellcheck="false")
+            button(type="submit") Send message
+
