@@ -20,14 +20,12 @@ html
         h1 Messages board
         p#messg-p Leave your message here!
     
-      //- if messages && messages.length
-      //-   each message in messages
-      //-     .message
-      //-       p User: #{message.user}
-      //-       p Text: #{message.text}
-      //- else
-      //-   p No messages available
-      
+
+        each message in messages
+          .message
+            p User: #{message.user}
+            p Text: #{message.text}
+
     
     div#messages-container
       

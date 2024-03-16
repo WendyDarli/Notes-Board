@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Gaegu&family=M+PLUS+Rounded+1c&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gaegu&display=swap');
+
+body{
+    background-color: #D7D7D7;
+}
+
+h1{
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0;
+    
+}
