@@ -15,19 +15,15 @@ html
   body
 
     div#title-container
-      button#add-note-btn +
+      a(href="http://localhost:3000/new", id="add-note-btn") +
       div
-        h1 Messages board
+        h1 Mini Messages board
         p#messg-p Leave your message here!
     
 
-        each message in messages
-          .message
-            p User: #{message.user}
-            p Text: #{message.text}
-
-    
-    div#messages-container
-      
-
+div#messages-container
+  div#mynote
+      div#mynoteheader
+      p#messageContent
+      p#messageAuthor
 

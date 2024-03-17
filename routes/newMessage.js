@@ -1,37 +1,25 @@
-// var express = require('express');
-// var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const messages = require('./messagesArray');
 
 
-// const messages = [
-//   {
-//     "text": "Hi there!",
-//     "user": "Amando"
-
-//   },
-//   {
-//     "text": "Hello World!",
-//     "user": "Charles"
-
-//   }
-// ]
-
-
-// router.get('/', function(req, res, next) {
-//   res.render('form', { title: "New message", messages: messages})
+router.get('/', function(req, res, next) {
+  res.render('form', { title: "New message", messages: messages})
 
   
-// });
+});
 
-// router.post('/', function(req, res) {
-//   const messageText = req.body.messageText;
-//   const userName = req.body.userName;
+router.post('/', function(req, res) {
+  const messageText = req.body.messageText;
+  const userName = req.body.userName;
 
-//   messages.push({text: messageText, user: userName});
+  messages.push({text: messageText, user: userName});
 
   
-//   res.redirect('/');
-// });
+  res.redirect('/');
+});
 
 
 
-// module.exports = router;
+module.exports = router;
+
