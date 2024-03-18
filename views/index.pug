@@ -20,10 +20,9 @@ html
         h1 Mini Messages board
         p#messg-p Leave your message here!
     
-
-div#messages-container
-  div#mynote
-      div#mynoteheader
-      p#messageContent
-      p#messageAuthor
-
+#messages-container
+  each message in messages
+    .mynote
+      p.mynoteheader
+      p#messageContent #{message.text}
+      p#messageAuthor  #{message.user}

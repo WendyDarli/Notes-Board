@@ -47,26 +47,32 @@ h1 {
 
 #messages-container{
     padding: 20px 30px;
+    position: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 
 
-#mynote{
-    position: absolute;
-
+.mynote {
+    position: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     background-color: pink;
     font-family: "Gaegu", sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     padding: 0px 13px 13px 13px;
     box-shadow: 10px 10px 10.3px -1px rgba(0, 0, 0, 0.25);
     transition: transform 0.3s ease;
     width: 194px;
     height: 221px;
+    margin: 15px;
    
 }
-#mynoteheader{
+.mynoteheader{
     background-image: linear-gradient(#fba5b4, pink);
     width: 220px;
     height: 32px;
+    margin: 0px -13px 0px -13px;
     margin-left: -13px;
     margin-right: -13px;
     cursor: move;
@@ -74,22 +80,23 @@ h1 {
 }
 
 
-.note{
-    
-    border: none;
-    background-color: pink;
-    font-family: "Gaegu", sans-serif;
-    font-size: 15px;
-    outline: none;
-}
+
 
 #message{  
     resize: none;
     
 }
 
+#messageContent{
+    max-width: 188px;
+    height: 150px;
+    margin: 0px;
+    word-wrap: break-word;
+}
+
+
 
 #messageAuthor{
     text-align: end;
-    width: 188px;
+    max-width: 188px;
 }
