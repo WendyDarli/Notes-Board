@@ -8,7 +8,12 @@ html
 
         form(method="POST" action="/new")
             div#center
-                textarea(name="messageText",  cols="25", rows="8" placeholder="Your message here." maxlength="184" spellcheck="false")
-                input(name="userName" placeholder="- Your name here." maxlength="27" type="text" spellcheck="false")
+                #note
+                    p#header
+                    textarea(name="messageText",  cols="25", rows="8" placeholder="Your message here." maxlength="154" spellcheck="false")
+                    input(name="userName" placeholder="- Your name here." maxlength="22" type="text" spellcheck="false")
+
+            div#div-btn
+                
                 button(type="submit") Send
 
