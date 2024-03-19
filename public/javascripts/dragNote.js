@@ -1,10 +1,10 @@
-dragElement(document.getElementById("mynote"));
+dragElement(document.getElementsByClassName("mynote")[0]);
 
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-  if (document.getElementById(elmnt.id + "header")) {
+  if (document.getElementsByClassName(elmnt.className + "header")[0]) {
     // if present, the header is where you move the DIV from:
-    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+    document.getElementsByClassName(elmnt.className + "header")[0].onmousedown = dragMouseDown;
   } else {
     // otherwise, move the DIV from anywhere inside the DIV:
     elmnt.onmousedown = dragMouseDown;
@@ -20,6 +20,7 @@ function dragElement(elmnt) {
     document.onmouseup = closeDragElement;
     // call a function whenever the cursor moves:
     document.onmousemove = elementDrag;
+
   }
   
   function elementDrag(e) {
@@ -30,20 +31,22 @@ function dragElement(elmnt) {
     pos2 = pos4 - e.clientY;
     pos3 = e.clientX;
     pos4 = e.clientY;
-    //prevent movement top
+    // set the element's new position:
     let newTop = elmnt.offsetTop - pos2;
     if (newTop < 142) {
-        newTop = 145;
+        newTop = 142;
     }
     elmnt.style.top = newTop + "px";
     elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
 }
-
 
   function closeDragElement() {
     // stop moving when mouse button is released
     document.onmouseup = null;
     document.onmousemove = null;
   }
+  
 }
 
+//implement loop to iterate through all the messages, for rotate notes file too
+//send values of color, position and rotation to the server (?)

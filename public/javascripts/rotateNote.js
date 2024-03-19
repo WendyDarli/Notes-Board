@@ -1,4 +1,4 @@
-const mynote = document.getElementById("mynote");
+const mynote = document.getElementsByClassName("mynote")[0];
 let rotation = 0;
   
   mynote.addEventListener("mousedown", (event) => {
