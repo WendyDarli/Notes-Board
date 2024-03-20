@@ -1,10 +1,11 @@
-dragElement(document.getElementsByClassName("mynote")[0]);
-
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-  if (document.getElementsByClassName(elmnt.className + "header")[0]) {
-    // if present, the header is where you move the DIV from:
-    document.getElementsByClassName(elmnt.className + "header")[0].onmousedown = dragMouseDown;
+
+  // Check if header element exists within elmnt
+  let header = elmnt.querySelector(".mynoteheader");
+  if (header) {
+    // If present, the header is where you move the DIV from
+    header.onmousedown = dragMouseDown;
   } else {
     // otherwise, move the DIV from anywhere inside the DIV:
     elmnt.onmousedown = dragMouseDown;
@@ -20,9 +21,8 @@ function dragElement(elmnt) {
     document.onmouseup = closeDragElement;
     // call a function whenever the cursor moves:
     document.onmousemove = elementDrag;
-
   }
-  
+
   function elementDrag(e) {
     e = e || window.event;
     e.preventDefault();
@@ -34,19 +34,28 @@ function dragElement(elmnt) {
     // set the element's new position:
     let newTop = elmnt.offsetTop - pos2;
     if (newTop < 142) {
-        newTop = 142;
+      newTop = 142;
     }
     elmnt.style.top = newTop + "px";
     elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-}
+  }
 
   function closeDragElement() {
     // stop moving when mouse button is released
     document.onmouseup = null;
     document.onmousemove = null;
   }
-  
+
+}
+
+
+for (let i = 0; i < document.getElementsByClassName("mynote").length; i++) {
+  dragElement(document.getElementsByClassName("mynote")[i]);
 }
 
 //implement loop to iterate through all the messages, for rotate notes file too
 //send values of color, position and rotation to the server (?)
+//add icon
+
+
+
