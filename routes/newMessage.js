@@ -21,7 +21,7 @@ router.post('/', function(req, res) {
     if (err) throw err;
 });
 
-  res.redirect('/');
+  res.redirect('/savestyle');
 });
 
 

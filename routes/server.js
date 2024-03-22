@@ -9,6 +9,7 @@ const PORT = 3000;
 
 const indexRouter = require('./index');
 const newMessageRouter = require('./newMessage');
+const saveStyleRouter = require('./saveStyle');
 const app = express();
 
 // view engine setup
@@ -29,6 +30,7 @@ app.use(bodyParser.json());
 
 app.use('/', indexRouter);
 app.use('/new', newMessageRouter);
+app.use('/savestyle', saveStyleRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

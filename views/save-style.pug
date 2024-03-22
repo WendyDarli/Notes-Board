@@ -1,0 +1,32 @@
+doctype html
+html 
+  head
+  
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width,initial-scale=1")
+    title Messages Board
+    link(rel='stylesheet' type="text/css" href='/stylesheets/stylePage.css')
+
+    script(src="/javascripts/dragNote.js" defer)
+    script(src="/javascripts/rotateNote.js" defer)
+    script(src="/javascripts/changeNoteColor.js" defer)
+    script(src="/javascripts/test.js" defer)
+  body
+
+    div#title-container
+      //- a(href="http://localhost:3000/new", id="add-note-btn") +
+      div
+        h1 Mini Messages board
+        p#messg-p Save your style!
+    
+    #messages-container
+      each message in messages
+        .mynote
+          .mynoteheader
+          p.messageContent #{message.text}
+          p.messageAuthor  #{message.user}
+          button.saveBtn save
+            script.
+              document.querySelector(".saveBtn").addEventListener("click", function() {
+                window.location.href = "/";
+              });
