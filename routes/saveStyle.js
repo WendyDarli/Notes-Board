@@ -1,12 +1,38 @@
 const express = require('express');
 const router = express.Router();
+const styles = require('./styles');
 const messages = require('./messagesArray');
 const fs = require('fs');
 
-router.get('/', function(req, res, next) {
-  res.render('save-style', { title: "New message", messages: messages})
+router.use(express.json());
 
-  //click saveBTn and redirect to index
+router.get('/', function(req, res, next) {
+  res.render('save-style', { messages: messages, styles: styles });
+});
+
+router.put('/', (req, res) => {
+  const { index, top, left, backgroundColor, backgroundImage, boxShadow, transform } = req.body;
+
+  //get new style
+  const newStyle = {
+    "top": top,
+    "left": left,
+    "background-color": backgroundColor,
+    "background-image": backgroundImage,
+    "boxShadow": boxShadow,
+    "transform": transform
+  };
+
+  styles[index] = newStyle;
+  
+  fs.writeFile(__dirname + '/styles.js', 'const styles = ' + JSON.stringify(styles, null, 2) + ';\n\nmodule.exports = styles;', (err) => {
+    if (err) {
+      console.error('Failed to save styles:', err);
+      return res.status(500).send('Failed to save styles');
+    }
+    
+    res.send("success");
+  });
 });
 
 module.exports = router;
