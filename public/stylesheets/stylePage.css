@@ -64,7 +64,7 @@ h1 {
     height: 221px;
     white-space: pre-wrap;
     overflow-wrap: break-word;
-    /* margin: 15px; */ 
+
 }
 
 .mynoteheader{
@@ -86,6 +86,7 @@ h1 {
 .messageAuthor{
     text-align: end;
     max-width: 188px;
+    max-height: 32px;
 }
 
 .saveBtn{
@@ -96,6 +97,7 @@ h1 {
     font-weight: 700;
     border: 1px solid black;
     transition: background-color 0.3s ease;
+    margin-top: 15px;
 }
 .saveBtn:hover{
     background-color: #d2d2d2;
