@@ -15,7 +15,7 @@ function addMessage(req, res, next) {
 
   messages.push(newMessage);
 
-  fs.writeFile(__dirname + '../public/javascripts/messagesArray.js', 'const message = ' + JSON.stringify(messages, null, 2) + ';\n\nmodule.exports = message;', (err) => {
+  fs.writeFile(__dirname + '/../public/javascripts/messagesArray.js', 'const message = ' + JSON.stringify(messages, null, 2) + ';\n\nmodule.exports = message;', (err) => {
     if (err) {
       console.error('Failed to save messages:', err);
       return res.status(500).send('Failed to save messages');
@@ -39,7 +39,7 @@ function addDefaultStyle(req, res) {
 
   styles.push(defaultStyle);
 
-  fs.writeFile(__dirname + '../public/javascripts/styles.js', 'const styles = ' + JSON.stringify(styles, null, 2) + ';\n\nmodule.exports = styles;', (err) => {
+  fs.writeFile(__dirname + '/../public/javascripts/styles.js', 'const styles = ' + JSON.stringify(styles, null, 2) + ';\n\nmodule.exports = styles;', (err) => {
     if (err) {
       console.error('Failed to save default style:', err);
       return res.status(500).send('Failed to save default style');

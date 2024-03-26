@@ -26,7 +26,7 @@ router.put('/', (req, res) => {
 
   styles[index] = newStyle;
   
-  fs.writeFile(__dirname + '../public/javascripts/styles.js', 'const styles = ' + JSON.stringify(styles, null, 2) + ';\n\nmodule.exports = styles;', (err) => {
+  fs.writeFile(__dirname + '/../public/javascripts/styles.js', 'const styles = ' + JSON.stringify(styles, null, 2) + ';\n\nmodule.exports = styles;', (err) => {
     if (err) {
       console.error('Failed to save styles:', err);
       return res.status(500).send('Failed to save styles');

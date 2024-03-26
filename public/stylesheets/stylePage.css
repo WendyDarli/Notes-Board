@@ -62,6 +62,8 @@ h1 {
     transition: transform 0.3s ease;
     width: 194px;
     height: 221px;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
     /* margin: 15px; */ 
 }
 

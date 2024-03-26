@@ -7,7 +7,17 @@ const styles = [
     "boxShadow": "rgba(0, 0, 0, 0.25) 10px 10px 10.3px -1px",
     "transform": "rotate(0.2rad)",
     "disabled": true
-  }
+  },
+  {
+    "top": "188px",
+    "left": "1423px",
+    "background-color": "pink",
+    "background-image": "linear-gradient(rgb(251, 165, 180), pink)",
+    "boxShadow": "rgba(0, 0, 0, 0.25) -10px 10px 10.3px -1px",
+    "transform": "rotate(-0.2rad)",
+    "disabled": true
+  },
+
 ];
 
 module.exports = styles;
