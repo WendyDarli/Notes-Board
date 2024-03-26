@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const styles = require('./styles');
-const messages = require('./messagesArray');
+const styles = require('../public/javascripts/styles');
+const messages = require('../public/javascripts/messagesArray');
 const fs = require('fs');
 
 router.use(express.json());
@@ -20,12 +20,13 @@ router.put('/', (req, res) => {
     "background-color": backgroundColor,
     "background-image": backgroundImage,
     "boxShadow": boxShadow,
-    "transform": transform
+    "transform": transform,
+    "disabled": true
   };
 
   styles[index] = newStyle;
   
-  fs.writeFile(__dirname + '/styles.js', 'const styles = ' + JSON.stringify(styles, null, 2) + ';\n\nmodule.exports = styles;', (err) => {
+  fs.writeFile(__dirname + '../public/javascripts/styles.js', 'const styles = ' + JSON.stringify(styles, null, 2) + ';\n\nmodule.exports = styles;', (err) => {
     if (err) {
       console.error('Failed to save styles:', err);
       return res.status(500).send('Failed to save styles');

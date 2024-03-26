@@ -26,4 +26,11 @@ html
               .mynoteheader(style=`background-image: ${style['background-image']}`)
               p.messageContent #{message.text}
               p.messageAuthor  #{message.user}
-              button.saveBtn(type="submit" data-index=index) save
+              button.saveBtn(type="submit" data-index=index disabled=style.disabled) save
+script.
+  document.querySelectorAll('.saveBtn').forEach(button => {
+    button.addEventListener('click', function() {
+      window.location.href = '/';
+      button.disabled = true;
+    });
+  });

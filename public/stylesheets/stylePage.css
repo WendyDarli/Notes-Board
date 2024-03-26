@@ -98,3 +98,7 @@ h1 {
 .saveBtn:hover{
     background-color: #d2d2d2;
 }
+
+button.saveBtn:disabled {   
+    opacity: 0;
+}

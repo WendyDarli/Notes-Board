@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const messages = require('./messagesArray');
-const styles = require('./styles');
+const messages = require('../public/javascripts/messagesArray');
+const styles = require('../public/javascripts/styles');
 
 /* GET home page. */
 

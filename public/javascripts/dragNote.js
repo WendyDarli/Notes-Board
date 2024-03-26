@@ -53,9 +53,7 @@ for (let i = 0; i < document.getElementsByClassName("mynote").length; i++) {
   dragElement(document.getElementsByClassName("mynote")[i]);
 }
 
-//implement loop to iterate through all the messages, for rotate notes file too
-//send values of color, position and rotation to the server (?)
-//add icon
+
 
 
 
