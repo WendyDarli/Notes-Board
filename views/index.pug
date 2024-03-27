@@ -15,10 +15,13 @@ html
         h1 Mini Messages board
         p#messg-p Leave your message here!
     
-#messages-container
-  each message, index in messages
-    - const style = styles[index]
-          .mynote(style=`top: ${style.top}; left: ${style.left}; background-color: ${style['background-color']}; box-shadow: ${style['box-shadow']}; transform: ${style.transform}`)
-            .mynoteheader(style=`background-image: ${style['background-image']}`)
-            p.messageContent #{message.text}
-            p.messageAuthor  #{message.user}
+    #messages-container
+      each message, index in messages
+        - const style = styles[index]
+              .mynote(style=`top: ${style.top}; left: ${style.left}; background-color: ${style['background-color']}; box-shadow: ${style['box-shadow']}; transform: ${style.transform}`)
+                .mynoteheader(style=`background-image: ${style['background-image']}`)
+                p.messageContent #{message.text}
+                p.messageAuthor  #{message.user}
+    footer 
+      p(id="madeBy") Made with ♡ by  
+      a(id="gitLink" href="https://github.com/WendyDarli") WendyDarli

@@ -106,3 +106,26 @@ h1 {
 button.saveBtn:disabled {   
     opacity: 0;
 }
+
+footer{
+    background-color: #b4b4b4;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-left: -8px;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-style: italic;
+}
+
+#gitLink, #madeBy{
+    display: inline;
+    color: #ffffff;
+
+}
+
+#gitLink{
+    color: #b8dfff;
+}
